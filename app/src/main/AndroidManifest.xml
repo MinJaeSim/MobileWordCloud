@@ -22,6 +22,14 @@
                 <data android:mimeType="text/plain"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".View.DisplayActivity"/>
+
+        <activity android:name=".View.SelectActivity"/>
+
+        <activity android:name=".View.SplashActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -1,35 +1,37 @@
 package com.example.simminje.mobilewordcloud.View;
 
-import android.content.Context;
-import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.simminje.mobilewordcloud.R;
 
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
-
+    private FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fm = getSupportFragmentManager();
+        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
+
+        if (fragment == null) {
+            fragment = new MainFragment();
+            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
+        }
 
         Button loadFromWebButton = (Button) findViewById(R.id.load_from_web_button);
         loadFromWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("AAAA", "Web");
-
+                Fragment LoadFromWebFragment = new LoadWebFragment();
+                fm.beginTransaction().replace(R.id.fragment_container, LoadFromWebFragment).commit();
             }
         });
 
@@ -37,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         loadFromKaKaoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("AAAA", "KAKAO");
-
+                Fragment LoadFromKakaoFragment = new LoadKakaoFragment();
+                fm.beginTransaction().replace(R.id.fragment_container, LoadFromKakaoFragment).commit();
             }
         });
     }

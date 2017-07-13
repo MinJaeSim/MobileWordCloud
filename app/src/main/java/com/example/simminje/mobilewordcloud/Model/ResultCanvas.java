@@ -1,4 +1,4 @@
-package com.example.simminje.mobilewordcloud.View;
+package com.example.simminje.mobilewordcloud.Model;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,10 +8,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class CanvasView extends View {
+public class ResultCanvas extends View {
     private Paint paint;
 
-    public CanvasView(Context context, @Nullable AttributeSet attrs) {
+    public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         paint = new Paint();
         paint.setAntiAlias(true);
