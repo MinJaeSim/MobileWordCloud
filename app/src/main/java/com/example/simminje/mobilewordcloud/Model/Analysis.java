@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -66,20 +67,21 @@ public class Analysis {
             WordCount wc = pq.poll();
             if (wc.word.length() > 1) words.add(wc);
         }
-
-        for (WordCount word : words) {
-            System.out.println(word.toString());
-        }
+//        for (WordCount word : words) {
+//            System.out.println(word.toString());
+//        }
     }
 
     private static String removePunctuations(String str) {
-
         String s = str.replaceAll("\\p{Punct}|\\p{Digit}", "");
-
         return s;
     }
 
-    private static class WordCount implements Comparable<WordCount> {
+    public ArrayList<WordCount> getData() {
+        return words;
+    }
+
+    public static class WordCount implements Comparable<WordCount>, Serializable {
         String word;
         int n;
 
@@ -97,5 +99,6 @@ public class Analysis {
         public String toString() {
             return word + "(" + n + ")";
         }
+
     }
 }

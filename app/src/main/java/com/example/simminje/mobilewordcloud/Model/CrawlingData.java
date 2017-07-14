@@ -9,6 +9,7 @@ import java.io.IOException;
 public class CrawlingData {
     private String url;
     private Elements elements;
+    private Analysis analysis;
 
     public CrawlingData(String url, final OnDataCrawlingListener listener) {
         this.url = url;

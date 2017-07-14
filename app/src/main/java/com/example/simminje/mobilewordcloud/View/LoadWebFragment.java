@@ -1,10 +1,10 @@
 package com.example.simminje.mobilewordcloud.View;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +38,11 @@ public class LoadWebFragment extends Fragment {
                 crawling = new CrawlingData(url, new OnDataCrawlingListener() {
                     @Override
                     public void onSuccess() {
-                        Log.i("AAAA","crawling");
-                        analysis();
+                        analysisData();
+
+                        Intent intent = new Intent(getContext(), DisplayActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
                     }
                 });
             }
@@ -48,14 +51,11 @@ public class LoadWebFragment extends Fragment {
         return view;
     }
 
-    private void analysis() {
+    private void analysisData() {
 
         Elements elements = crawling.getData();
         AssetManager am = getContext().getAssets();
 
-        Log.i("AAAA","analysis");
-        Analysis analysis = new Analysis(am,elements);
-
-
+        Analysis analysis = new Analysis(am, elements);
     }
 }
