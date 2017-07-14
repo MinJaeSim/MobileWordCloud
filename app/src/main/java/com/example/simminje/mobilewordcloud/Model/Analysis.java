@@ -1,9 +1,101 @@
 package com.example.simminje.mobilewordcloud.Model;
 
+import android.content.res.AssetManager;
+
+import org.jsoup.select.Elements;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
 public class Analysis {
-    public Analysis() {
-        StringBuffer stringBuffer = new StringBuffer();
+    private AssetManager am;
+    private Elements elements;
+    private HashSet<String> filter;
+    private ArrayList<WordCount> words;
+
+    public Analysis(AssetManager am, Elements elements) {
+        this.am = am;
+        this.elements = elements;
+        loadFilter();
+        processString();
     }
 
-    
+    private void loadFilter() {
+        filter = new HashSet<>();
+
+        try (InputStream stream = am.open("filter.txt")) {
+            InputStreamReader is = new InputStreamReader(stream);
+            BufferedReader bs = new BufferedReader(is);
+            String str;
+            while ((str = bs.readLine()) != null)
+                filter.add(str);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void processString() {
+        Scanner scan = new Scanner(elements.text());
+        Map<String, Integer> count = new HashMap<>();
+
+        while (scan.hasNext()) {
+            String word = removePunctuations(scan.next());
+            if (filter.contains(word)) continue;
+            if (word.equals("")) continue;
+            Integer n = count.get(word);
+            count.put(word, (n == null) ? 1 : n + 1);
+        }
+
+        PriorityQueue<WordCount> pq = new PriorityQueue<>();
+        for (Map.Entry<String, Integer> entry : count.entrySet()) {
+            pq.add(new WordCount(entry.getKey(), entry.getValue()));
+        }
+
+        words = new ArrayList<>();
+
+        while (!pq.isEmpty()) {
+            WordCount wc = pq.poll();
+            if (wc.word.length() > 1) words.add(wc);
+        }
+
+        for (WordCount word : words) {
+            System.out.println(word.toString());
+        }
+    }
+
+    private static String removePunctuations(String str) {
+
+        String s = str.replaceAll("\\p{Punct}|\\p{Digit}", "");
+
+        return s;
+    }
+
+    private static class WordCount implements Comparable<WordCount> {
+        String word;
+        int n;
+
+        WordCount(String word, int n) {
+            this.word = word;
+            this.n = n;
+        }
+
+        @Override
+        public int compareTo(WordCount another) {
+            return another.n - n;
+        }
+
+        @Override
+        public String toString() {
+            return word + "(" + n + ")";
+        }
+    }
 }

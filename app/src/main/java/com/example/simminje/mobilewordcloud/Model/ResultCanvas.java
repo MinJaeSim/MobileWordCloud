@@ -25,6 +25,6 @@ public class ResultCanvas extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        canvas.drawLine(0,0,500,500,paint);
+        canvas.drawLine(0, 0, 500, 500, paint);
     }
 }

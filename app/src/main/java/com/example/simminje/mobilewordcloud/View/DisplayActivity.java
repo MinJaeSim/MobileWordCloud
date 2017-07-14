@@ -1,7 +1,9 @@
 package com.example.simminje.mobilewordcloud.View;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.simminje.mobilewordcloud.Model.ResultCanvas;
@@ -15,5 +17,23 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         ResultCanvas resultCanvas = (ResultCanvas) findViewById(R.id.canvas_view);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog dialog = new AlertDialog.Builder(DisplayActivity.this)
+                .setMessage("앱을 종료하시겠습니까?")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                }).create();
+        dialog.show();
     }
 }
