@@ -1,5 +1,6 @@
 package com.example.simminje.mobilewordcloud.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -54,8 +55,8 @@ public class LoadWebFragment extends Fragment {
     private void analysisData() {
 
         Elements elements = crawling.getData();
-        AssetManager am = getContext().getAssets();
+        Context ctx = getContext();
 
-        Analysis analysis = new Analysis(am, elements);
+        Analysis analysis = new Analysis(ctx, elements);
     }
 }
