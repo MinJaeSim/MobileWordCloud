@@ -11,15 +11,12 @@ public class CrawlingData {
     private Elements elements;
     private Analysis analysis;
 
-    public CrawlingData(String url, final OnDataCrawlingListener listener) {
+    public CrawlingData(final String url, final OnDataCrawlingListener listener) {
         this.url = url;
 
         new Thread() {
             @Override
             public void run() {
-
-                String url = "http://english.chosun.com/site/data/html_dir/2017/07/14/2017071400803.html";
-
                 Document doc = null;
                 try {
                     doc = Jsoup.connect(url).header("content-type", "multipart/form-data; boundary=---011000010111000001101001").header("authorization", "Basic ZmJfMTY2MTUzMDc0NzQ2MTk5NDox").header("cache-control", "no-cache").get();

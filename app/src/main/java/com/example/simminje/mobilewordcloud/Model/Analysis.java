@@ -76,9 +76,9 @@ public class Analysis {
             WordCount wc = pq.poll();
             if (wc.word.length() > 1) words.add(wc);
         }
-//        for (WordCount word : words) {
-//            System.out.println(word.toString());
-//        }
+        for (WordCount word : words) {
+            System.out.println(word.toString());
+        }
     }
 
     private static String removePunctuations(String str) {

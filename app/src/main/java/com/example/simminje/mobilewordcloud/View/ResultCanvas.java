@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -24,6 +25,7 @@ public class ResultCanvas extends View {
 
     private Paint paint;
     private ArrayList<String> data;
+    private ArrayList<Rect> rects;
 
     public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -40,11 +42,7 @@ public class ResultCanvas extends View {
     }
 
     private void loadAnalysisData() {
-        String dirPath = getContext()
-                .getFilesDir()
-                .getAbsolutePath();
-
-        System.out.println(dirPath);
+        String dirPath = getContext().getFilesDir().getAbsolutePath();
 
         File file = new File(dirPath);
 
@@ -82,18 +80,50 @@ public class ResultCanvas extends View {
 
         int width = canvas.getWidth();
         int height = canvas.getHeight();
+        int posX, posY;
+        int size;
+        String word;
 
         if (data != null) {
-            int size;
+            rects = new ArrayList<>();
+            System.out.println(width + "W  canvas   H" + height);
+
             for (int i = 0; i < data.size(); i += 2) {
+                word = data.get(i + 1);
                 size = Integer.parseInt(data.get(i));
-                paint.setTextSize(size * 50);
-                canvas.drawText(data.get(i + 1), (float) (Math.random() * width / 2), (float) (Math.random() * height), paint);
-                if (i > 40) break;
+                Rect boundRect = new Rect();
+
+                paint.setTextSize(size * 40);
+                paint.getTextBounds(word, 0, word.length(), boundRect);
+
+                posX = (int) (Math.random() * width / 2);
+                posY = (int) (Math.random() * height / 2);
+
+                Rect textRect = new Rect(posX, posY, posX + boundRect.width(), posY + boundRect.height());
+
+                while (collision(textRect)) {
+                    posX = (int) (Math.random() * width / 2);
+                    posY = (int) (Math.random() * height / 2);
+                    textRect = new Rect(posX, posY, posX + boundRect.width(), posY + boundRect.height());
+                }
+
+                rects.add(textRect);
+                //canvas.drawRect(posX, posY, posX + boundRect.width(), posY + boundRect.height(), paint);
+
+                canvas.drawText(word, posX, posY + boundRect.height(), paint);
+
+                if (i > 20) break;
             }
         } else {
             canvas.drawLine(0, 0, width, height, paint);
             canvas.drawLine(width, 0, 0, height, paint);
         }
+    }
+
+    private boolean collision(Rect textRect) {
+        for (Rect r : rects) {
+            if (r.intersect(textRect)) return true;
+        }
+        return false;
     }
 }
