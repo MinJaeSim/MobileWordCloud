@@ -9,23 +9,21 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.example.simminje.mobilewordcloud.Model.Analysis;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class ResultCanvas extends View {
 
     private Paint paint;
-    private ArrayList<String> data;
-    private ArrayList<Rect> rects;
+    private List<String> data;
+    private List<Rect> rects;
 
     public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -83,36 +81,43 @@ public class ResultCanvas extends View {
         int posX, posY;
         int size;
         String word;
+        Random generateRandom = new Random();
+        int tryNum = 0;
+        int maxNum = 20;
 
         if (data != null) {
             rects = new ArrayList<>();
-            System.out.println(width + "W  canvas   H" + height);
-
+            data = data.subList(0, 60);
             for (int i = 0; i < data.size(); i += 2) {
                 word = data.get(i + 1);
                 size = Integer.parseInt(data.get(i));
                 Rect boundRect = new Rect();
 
-                paint.setTextSize(size * 40);
+                if (Character.getType(word.charAt(0)) == 5) {
+                    paint.setTextSize(size * 8);
+                } else {
+                    paint.setTextSize(size * 25);
+                }
                 paint.getTextBounds(word, 0, word.length(), boundRect);
 
-                posX = (int) (Math.random() * width / 2);
-                posY = (int) (Math.random() * height / 2);
+                posX = (int) (generateRandom.nextDouble() * (width - boundRect.width()));
+                posY = (int) (generateRandom.nextDouble() * (height - boundRect.height()));
 
                 Rect textRect = new Rect(posX, posY, posX + boundRect.width(), posY + boundRect.height());
 
                 while (collision(textRect)) {
-                    posX = (int) (Math.random() * width / 2);
-                    posY = (int) (Math.random() * height / 2);
+                    posX = (int) (generateRandom.nextDouble() * (width - boundRect.width()));
+                    posY = (int) (generateRandom.nextDouble() * (height - boundRect.height()));
                     textRect = new Rect(posX, posY, posX + boundRect.width(), posY + boundRect.height());
+                    if (tryNum > maxNum) break;
+                    tryNum++;
                 }
 
                 rects.add(textRect);
                 //canvas.drawRect(posX, posY, posX + boundRect.width(), posY + boundRect.height(), paint);
-
                 canvas.drawText(word, posX, posY + boundRect.height(), paint);
 
-                if (i > 20) break;
+                if (i >= 40) break;
             }
         } else {
             canvas.drawLine(0, 0, width, height, paint);
@@ -121,9 +126,20 @@ public class ResultCanvas extends View {
     }
 
     private boolean collision(Rect textRect) {
+        int x11 = textRect.left;
+        int x12 = textRect.right;
+        int y11 = textRect.top;
+        int y12 = textRect.bottom;
+        int x21, x22, y21, y22;
+
         for (Rect r : rects) {
-            if (r.intersect(textRect)) return true;
+            x21 = r.left;
+            x22 = r.right;
+            y21 = r.top;
+            y22 = r.bottom;
+            if (x11 < x22 && x21 < x12 && y11 < y22 && y21 < y12) return true;
         }
+
         return false;
     }
 }

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -27,7 +28,7 @@ public class Analysis {
     private AssetManager am;
     private Elements elements;
     private HashSet<String> filter;
-    private ArrayList<WordCount> words;
+    private List<WordCount> words;
 
     public Analysis(Context ctx, Elements elements) {
         this.ctx = ctx;
@@ -76,6 +77,9 @@ public class Analysis {
             WordCount wc = pq.poll();
             if (wc.word.length() > 1) words.add(wc);
         }
+
+        words = words.subList(0, 60);
+
         for (WordCount word : words) {
             System.out.println(word.toString());
         }
@@ -84,10 +88,6 @@ public class Analysis {
     private static String removePunctuations(String str) {
         String s = str.replaceAll("\\p{Punct}|\\p{Digit}", "");
         return s;
-    }
-
-    public ArrayList<WordCount> getData() {
-        return words;
     }
 
     private void saveData() {

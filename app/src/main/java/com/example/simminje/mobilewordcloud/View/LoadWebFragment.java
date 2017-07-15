@@ -2,7 +2,6 @@ package com.example.simminje.mobilewordcloud.View;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.example.simminje.mobilewordcloud.Model.Analysis;
 import com.example.simminje.mobilewordcloud.Model.CrawlingData;
@@ -23,18 +23,21 @@ import org.jsoup.select.Elements;
 public class LoadWebFragment extends Fragment {
 
     private CrawlingData crawling;
+    private Button displayButton;
+    private ProgressBar progressBar;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_load_web, container, false);
 
-        final Button displayButton = (Button) view.findViewById(R.id.display_result);
+        displayButton = (Button) view.findViewById(R.id.display_result);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
         displayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayButton.setEnabled(false);
+                showProgressBar();
 
                 EditText ed = (EditText) view.findViewById(R.id.url_input);
                 String url = ed.getText().toString();
@@ -45,20 +48,19 @@ public class LoadWebFragment extends Fragment {
                     crawling = new CrawlingData(url, new OnDataCrawlingListener() {
                         @Override
                         public void onSuccess() {
-
                             if (analysisData()) {
                                 Intent intent = new Intent(getContext(), DisplayActivity.class);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else {
-                                Snackbar.make(view, "데이터를 가져오지 못했습니다.", Snackbar.LENGTH_SHORT).show();
+                                Snackbar.make(view, "데이터 분석에 실패하였습니다.", Snackbar.LENGTH_SHORT).show();
                             }
                         }
                     });
                 } else {
                     Snackbar.make(view, "주소를 입력해 주세요", Snackbar.LENGTH_SHORT).show();
+                    hideProgressBar();
                 }
-                displayButton.setEnabled(true);
             }
         });
 
@@ -74,7 +76,16 @@ public class LoadWebFragment extends Fragment {
             new Analysis(ctx, elements);
             return true;
         }
-
         return false;
+    }
+
+    private void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+        displayButton.setEnabled(false);
+    }
+
+    private void hideProgressBar() {
+        progressBar.setVisibility(View.INVISIBLE);
+        displayButton.setEnabled(true);
     }
 }
