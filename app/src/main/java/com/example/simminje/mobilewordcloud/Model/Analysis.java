@@ -136,7 +136,7 @@ public class Analysis {
 
         @Override
         public String toString() {
-            return word + " " + n + " ";
+            return n + " " + word;
         }
 
     }

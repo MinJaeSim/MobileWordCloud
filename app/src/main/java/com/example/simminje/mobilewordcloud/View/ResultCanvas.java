@@ -21,9 +21,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ResultCanvas extends View {
+
     private Paint paint;
     private ArrayList<String> data;
-    private String dirPath;
 
     public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -31,6 +31,7 @@ public class ResultCanvas extends View {
         loadAnalysisData();
 
         paint = new Paint();
+
         paint.setAntiAlias(true);
         paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
@@ -39,7 +40,11 @@ public class ResultCanvas extends View {
     }
 
     private void loadAnalysisData() {
-        dirPath = getContext().getFilesDir().getAbsolutePath();
+        String dirPath = getContext()
+                .getFilesDir()
+                .getAbsolutePath();
+
+        System.out.println(dirPath);
 
         File file = new File(dirPath);
 
@@ -60,12 +65,9 @@ public class ResultCanvas extends View {
                     content += temp;
                 }
 
-                ArrayList<String> data = new ArrayList<>(Arrays.asList(content.split(" ")));
+                data = new ArrayList<>(Arrays.asList(content.split(" ")));
 
                 System.out.println("총 파일 갯수 : " + f.length);
-//                for (String str : data) {
-//                    System.out.println(str);
-//                }
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -78,17 +80,20 @@ public class ResultCanvas extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        if (data != null) {
-            System.out.println("NOT NULL");
+        int width = canvas.getWidth();
+        int height = canvas.getHeight();
 
+        if (data != null) {
+            int size;
             for (int i = 0; i < data.size(); i += 2) {
-                paint.setTextSize((int) data.get(i + 1).charAt(0) * 5);
-                canvas.drawText(data.get(i), i * 10, i * 10, paint);
+                size = Integer.parseInt(data.get(i));
+                paint.setTextSize(size * 50);
+                canvas.drawText(data.get(i + 1), (float) (Math.random() * width / 2), (float) (Math.random() * height), paint);
+                if (i > 40) break;
             }
         } else {
-            System.out.println("NULL");
-
-            canvas.drawLine(0, 0, 500, 500, paint);
+            canvas.drawLine(0, 0, width, height, paint);
+            canvas.drawLine(width, 0, 0, height, paint);
         }
     }
 }
