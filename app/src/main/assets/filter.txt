@@ -45,3 +45,8 @@ with
 was
 were
 will
+오후
+오전
+회원
+공지
+이모티콘

@@ -1,17 +1,22 @@
 package com.example.simminje.mobilewordcloud.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
+import com.example.simminje.mobilewordcloud.Model.Analysis;
 import com.example.simminje.mobilewordcloud.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -26,6 +31,7 @@ import com.google.android.gms.drive.OpenFileActivityBuilder;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import static android.app.Activity.RESULT_OK;
@@ -33,18 +39,23 @@ import static android.app.Activity.RESULT_OK;
 
 public class LoadKakaoFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
-    private static final int REQUEST_CODE_RESOLUTION = 3;
     private static final int REQUEST_CODE_OPENER = 0;
+    private static final int REQUEST_CODE_RESOLUTION = 3;
 
     private GoogleApiClient mGoogleApiClient;
-    DriveId mSelectedFileDriveId;
+    private DriveId mSelectedFileDriveId;
+    private String data;
+
+    private Button displayButton;
+    private ProgressBar progressBar;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_load_kakao, container, false);
 
-        Button displayButton = (Button) view.findViewById(R.id.display_result);
+        displayButton = (Button) view.findViewById(R.id.display_result);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(getContext())
@@ -56,11 +67,20 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         }
         mGoogleApiClient.connect();
 
+        Button displayButton = (Button) view.findViewById(R.id.display_result);
         displayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DisplayActivity.class);
-                startActivity(intent);
+                showProgressBar();
+                if (analysisData()) {
+                    Intent intent = new Intent(getContext(), DisplayActivity.class);
+                    startActivity(intent);
+                    hideProgressBar();
+                    getActivity().finish();
+                } else {
+                    Snackbar.make(view, "다시 골라 주세요", Snackbar.LENGTH_SHORT).show();
+                    hideProgressBar();
+                }
             }
         });
 
@@ -76,11 +96,11 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             mGoogleApiClient.connect();
         } else if (requestCode == REQUEST_CODE_OPENER) {
             mSelectedFileDriveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
-        } else {
         }
     }
 
     private void open() {
+        showProgressBar();
         DriveFile file = mSelectedFileDriveId.asDriveFile();
 
         file.open(mGoogleApiClient, DriveFile.MODE_READ_ONLY, null).setResultCallback(contentsOpenedCallback);
@@ -148,6 +168,37 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         mGoogleApiClient.connect();
     }
 
+    private boolean analysisData() {
+
+        if (data.length() > 0) {
+            Context ctx = getContext();
+            AssetManager am = ctx.getAssets();
+            String dirPath = ctx.getFilesDir().getAbsolutePath();
+            Analysis analysis = new Analysis(data);
+
+            if (analysis.isFilterNull()) {
+                try (InputStream stream = am.open("filter.txt")) {
+                    analysis.loadFilter(stream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            analysis.saveData(dirPath);
+            return true;
+        }
+        return false;
+    }
+
+    private void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+        displayButton.setEnabled(false);
+    }
+
+    private void hideProgressBar() {
+        progressBar.setVisibility(View.INVISIBLE);
+        displayButton.setEnabled(true);
+    }
+
     private final ResultCallback<DriveApi.DriveContentsResult> contentsOpenedCallback = new ResultCallback<DriveApi.DriveContentsResult>() {
         @Override
         public void onResult(@NonNull DriveApi.DriveContentsResult result) {
@@ -161,13 +212,14 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             String line;
             try {
                 while ((line = reader.readLine()) != null) {
-                    builder.append(line + " ");
+                    builder.append(line).append(" ");
                 }
-                String contentsAsString = builder.toString();
-                System.out.println(contentsAsString);
+                data = builder.toString();
+                hideProgressBar();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     };
+
 }

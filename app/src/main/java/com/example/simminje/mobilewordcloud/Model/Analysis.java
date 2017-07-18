@@ -1,10 +1,5 @@
 package com.example.simminje.mobilewordcloud.Model;
 
-import android.content.Context;
-import android.content.res.AssetManager;
-
-import org.jsoup.select.Elements;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,38 +19,33 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Analysis {
-    private Context ctx;
-    private AssetManager am;
-    private Elements elements;
-    private HashSet<String> filter;
+    private String data;
     private List<WordCount> words;
 
-    public Analysis(Context ctx, Elements elements) {
-        this.ctx = ctx;
-        this.am = ctx.getAssets();
-        this.elements = elements;
-        loadFilter();
-        processString();
-        saveData();
+    private static HashSet<String> filter;
+
+    public Analysis(String data) {
+        this.data = data;
+        filter = null;
     }
 
-    private void loadFilter() {
+    public void loadFilter(InputStream stream) {
         filter = new HashSet<>();
-
-        try (InputStream stream = am.open("filter.txt")) {
+        try {
             InputStreamReader is = new InputStreamReader(stream);
             BufferedReader bs = new BufferedReader(is);
             String str;
-            while ((str = bs.readLine()) != null)
+            while ((str = bs.readLine()) != null) {
                 filter.add(str);
-
+            }
+            processString();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void processString() {
-        Scanner scan = new Scanner(elements.text());
+        Scanner scan = new Scanner(data);
         Map<String, Integer> count = new HashMap<>();
 
         while (scan.hasNext()) {
@@ -86,14 +76,11 @@ public class Analysis {
     }
 
     private static String removePunctuations(String str) {
-        String s = str.replaceAll("\\p{Punct}|\\p{Digit}", "");
-        return s;
+        return str.replaceAll("\\p{Punct}|\\p{Digit}", "");
     }
 
-    private void saveData() {
-        String dirPath = ctx.getFilesDir().getAbsolutePath();
+    public void saveData(String dirPath) {
         File file = new File(dirPath);
-
         if (!file.exists()) {
             file.mkdir();
         }
@@ -120,7 +107,11 @@ public class Analysis {
         return new SimpleDateFormat("/yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
     }
 
-    public static class WordCount implements Comparable<WordCount>, Serializable {
+    public boolean isFilterNull() {
+        return filter == null;
+    }
+
+    private static class WordCount implements Comparable<WordCount>, Serializable {
         String word;
         int n;
 

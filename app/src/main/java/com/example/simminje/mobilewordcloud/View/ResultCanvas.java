@@ -94,7 +94,7 @@ public class ResultCanvas extends View {
                 Rect boundRect = new Rect();
 
                 if (Character.getType(word.charAt(0)) == 5) {
-                    paint.setTextSize(size * 8);
+                    paint.setTextSize(size * 15);
                 } else {
                     paint.setTextSize(size * 25);
                 }

@@ -2,6 +2,7 @@ package com.example.simminje.mobilewordcloud.View;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,9 @@ import com.example.simminje.mobilewordcloud.Model.OnDataCrawlingListener;
 import com.example.simminje.mobilewordcloud.R;
 
 import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class LoadWebFragment extends Fragment {
 
@@ -73,7 +77,18 @@ public class LoadWebFragment extends Fragment {
 
         if (elements.size() > 0) {
             Context ctx = getContext();
-            new Analysis(ctx, elements);
+            AssetManager am = ctx.getAssets();
+            String dirPath = ctx.getFilesDir().getAbsolutePath();
+            Analysis analysis = new Analysis(elements.text());
+
+            if (analysis.isFilterNull()) {
+                try (InputStream stream = am.open("filter.txt")) {
+                    analysis.loadFilter(stream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            analysis.saveData(dirPath);
             return true;
         }
         return false;
