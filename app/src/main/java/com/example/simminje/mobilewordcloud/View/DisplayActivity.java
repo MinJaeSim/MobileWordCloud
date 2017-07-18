@@ -62,9 +62,7 @@ public class DisplayActivity extends AppCompatActivity {
 
         String filename = generateFileName() + "_screenshot.png";
         File file = new File(Environment.getExternalStorageDirectory() + "/Pictures", filename);
-        FileOutputStream os = null;
-        try {
-            os = new FileOutputStream(file);
+        try (FileOutputStream os = new FileOutputStream(file)) {
             screenBitmap.compress(Bitmap.CompressFormat.PNG, 90, os);
             os.close();
         } catch (IOException e) {

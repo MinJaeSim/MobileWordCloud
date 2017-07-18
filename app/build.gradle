@@ -26,6 +26,8 @@ dependencies {
 
     compile 'org.jsoup:jsoup:1.10.3'
 
+    compile 'com.google.android.gms:play-services-drive:11.0.2'
+
     testCompile 'junit:junit:4.12'
 
     compile fileTree(include: ['*.jar'], dir: 'libs')
