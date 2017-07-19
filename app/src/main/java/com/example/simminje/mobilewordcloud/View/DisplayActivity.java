@@ -55,7 +55,7 @@ public class DisplayActivity extends AppCompatActivity {
         });
     }
 
-    public File ScreenShot(View view) {
+    private File ScreenShot(View view) {
         view.setDrawingCacheEnabled(true);
 
         Bitmap screenBitmap = view.getDrawingCache();

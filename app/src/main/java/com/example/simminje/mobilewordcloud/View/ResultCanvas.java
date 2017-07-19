@@ -34,7 +34,7 @@ public class ResultCanvas extends View {
 
         paint.setAntiAlias(true);
         paint.setColor(Color.BLACK);
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL);
         paint.setStrokeJoin(Paint.Join.ROUND);
         paint.setStrokeWidth(4f);
     }
@@ -56,7 +56,7 @@ public class ResultCanvas extends View {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fis));
 
                 String content = "";
-                String temp = "";
+                String temp;
                 while ((temp = bufferedReader.readLine()) != null) {
                     content += temp;
                 }
@@ -94,9 +94,11 @@ public class ResultCanvas extends View {
                 Rect boundRect = new Rect();
 
                 if (Character.getType(word.charAt(0)) == 5) {
-                    paint.setTextSize(size * 15);
+                    int fontSize = size > 30 ? (size * 10) : (size * 18);
+                    paint.setTextSize(fontSize);
                 } else {
-                    paint.setTextSize(size * 25);
+                    int fontSize = size > 30 ? (size * 10) : (size * 18);
+                    paint.setTextSize(fontSize);
                 }
                 paint.getTextBounds(word, 0, word.length(), boundRect);
 
@@ -114,7 +116,6 @@ public class ResultCanvas extends View {
                 }
 
                 rects.add(textRect);
-                //canvas.drawRect(posX, posY, posX + boundRect.width(), posY + boundRect.height(), paint);
                 canvas.drawText(word, posX, posY + boundRect.height(), paint);
 
                 if (i >= 40) break;

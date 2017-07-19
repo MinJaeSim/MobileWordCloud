@@ -57,6 +57,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         displayButton = (Button) view.findViewById(R.id.display_result);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
+        showProgressBar();
+
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                     .addApi(Drive.API)
@@ -95,7 +97,10 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         if (requestCode == REQUEST_CODE_RESOLUTION && resultCode == RESULT_OK) {
             mGoogleApiClient.connect();
         } else if (requestCode == REQUEST_CODE_OPENER) {
-            mSelectedFileDriveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
+            if (data == null)
+                mSelectedFileDriveId = null;
+            else
+                mSelectedFileDriveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
         }
     }
 
@@ -118,6 +123,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.i("GoogleDrive", "GoogleApiClient connected");
+        hideProgressBar();
         if (mSelectedFileDriveId != null) {
             open();
             return;
@@ -143,6 +149,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult result) {
         Log.i("GoogleDrive", "GoogleApiClient connection failed: " + result.toString());
+        hideProgressBar();
         if (!result.hasResolution()) {
             GoogleApiAvailability.getInstance().getErrorDialog(this.getActivity(), result.getErrorCode(), 0).show();
             return;
@@ -169,7 +176,6 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     }
 
     private boolean analysisData() {
-
         if (data.length() > 0) {
             Context ctx = getContext();
             AssetManager am = ctx.getAssets();
@@ -221,5 +227,4 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             }
         }
     };
-
 }
