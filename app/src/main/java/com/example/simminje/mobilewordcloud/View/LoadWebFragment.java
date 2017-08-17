@@ -6,18 +6,20 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.example.simminje.mobilewordcloud.Model.Analysis;
 import com.example.simminje.mobilewordcloud.Model.CrawlingData;
 import com.example.simminje.mobilewordcloud.Model.OnDataCrawlingListener;
 import com.example.simminje.mobilewordcloud.R;
+import com.stepstone.stepper.StepperLayout;
 
 import org.jsoup.select.Elements;
 
@@ -43,7 +45,7 @@ public class LoadWebFragment extends Fragment {
             public void onClick(View v) {
                 showProgressBar();
 
-                EditText ed = (EditText) view.findViewById(R.id.url_input);
+                TextInputEditText ed = (TextInputEditText) view.findViewById(R.id.textInput);
                 String url = ed.getText().toString();
 
                 String urlCheck = "^(https?):\\/\\/([^:\\/\\s]+)(:([^\\/]*))?((\\/[^\\s/\\/]+)*)?\\/?([^#\\s\\?]*)(\\?([^#\\s]*))?(#(\\w*))?$";

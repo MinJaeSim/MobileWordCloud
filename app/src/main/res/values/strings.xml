@@ -7,4 +7,8 @@
     <string name="display_result">결과보기</string>
     <string name="main_title">워드 클라우드 서비스</string>
     <string name="capture">캡쳐하기</string>
+    <string name="findByWeb">웹에서 가져오기</string>
+    <string name="findByKakao">카톡에서 가져오기</string>
+    <string name="review">지난 결과 보기</string>
+    <string name="tapTitle">제목</string>
 </resources>

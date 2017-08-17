@@ -26,6 +26,8 @@ dependencies {
 
     compile 'org.jsoup:jsoup:1.10.3'
 
+    compile 'com.stepstone.stepper:material-stepper:4.0.0'
+
     compile 'com.google.android.gms:play-services-drive:11.0.2'
 
     testCompile 'junit:junit:4.12'

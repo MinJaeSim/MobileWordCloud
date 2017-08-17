@@ -2,10 +2,13 @@ package com.example.simminje.mobilewordcloud.View;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -28,21 +31,23 @@ public class MainActivity extends AppCompatActivity {
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
 
-        Button loadFromWebButton = (Button) findViewById(R.id.load_from_web_button);
-        loadFromWebButton.setOnClickListener(new View.OnClickListener() {
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Fragment LoadFromWebFragment = new LoadWebFragment();
-                fm.beginTransaction().replace(R.id.fragment_container, LoadFromWebFragment).commit();
-            }
-        });
-
-        Button loadFromKaKaoButton = (Button) findViewById(R.id.load_from_kakao_button);
-        loadFromKaKaoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment LoadFromKakaoFragment = new LoadKakaoFragment();
-                fm.beginTransaction().replace(R.id.fragment_container, LoadFromKakaoFragment).commit();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_kakao:
+                        Fragment LoadFromKakaoFragment = new LoadKakaoFragment();
+                        fm.beginTransaction().replace(R.id.fragment_container, LoadFromKakaoFragment).commit();
+                        return true;
+                    case R.id.action_web:
+                        Fragment LoadFromWebFragment = new LoadWebFragment();
+                        fm.beginTransaction().replace(R.id.fragment_container, LoadFromWebFragment).commit();
+                        return true;
+                    case R.id.action_review:
+                        return true;
+                }
+                return false;
             }
         });
     }

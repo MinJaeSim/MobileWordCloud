@@ -7,6 +7,7 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -28,6 +29,7 @@ import com.google.android.gms.drive.DriveContents;
 import com.google.android.gms.drive.DriveFile;
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
+import com.stepstone.stepper.StepperLayout;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -49,6 +51,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     private Button displayButton;
     private ProgressBar progressBar;
 
+    private StepperLayout stepperLayout;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,17 +61,25 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         displayButton = (Button) view.findViewById(R.id.display_result);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
-        showProgressBar();
+        FloatingActionButton googleButton = (FloatingActionButton) view.findViewById(R.id.googleButton);
 
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                     .addApi(Drive.API)
                     .addScope(Drive.SCOPE_FILE)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
+                    .addConnectionCallbacks(LoadKakaoFragment.this)
+                    .addOnConnectionFailedListener(LoadKakaoFragment.this)
                     .build();
         }
-        mGoogleApiClient.connect();
+
+        googleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showProgressBar();
+                mGoogleApiClient.disconnect();
+                mGoogleApiClient.connect();
+            }
+        });
 
         Button displayButton = (Button) view.findViewById(R.id.display_result);
         displayButton.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +136,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     public void onConnected(Bundle connectionHint) {
         Log.i("GoogleDrive", "GoogleApiClient connected");
         hideProgressBar();
+
         if (mSelectedFileDriveId != null) {
             open();
             return;
@@ -168,8 +181,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                     .addApi(Drive.API)
                     .addScope(Drive.SCOPE_FILE)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
+                    .addConnectionCallbacks(LoadKakaoFragment.this)
+                    .addOnConnectionFailedListener(LoadKakaoFragment.this)
                     .build();
         }
         mGoogleApiClient.connect();

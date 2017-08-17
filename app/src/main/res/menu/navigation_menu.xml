@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_web"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/search_engine"
+        android:title="@string/findByWeb"/>
+    <item
+        android:id="@+id/action_kakao"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/speech_bubble"
+        android:title="@string/findByKakao"/>
+    <item
+        android:id="@+id/action_review"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/gallery"
+        android:title="@string/review"/>
+</menu>
