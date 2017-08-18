@@ -58,6 +58,9 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_load_kakao, container, false);
 
+        StepperLayout stepperLayout = (StepperLayout) view.findViewById(R.id.stepperLayout);
+        stepperLayout.setAdapter(new StepAdapter(getChildFragmentManager(), this.getContext()));
+
         displayButton = (Button) view.findViewById(R.id.display_result);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 

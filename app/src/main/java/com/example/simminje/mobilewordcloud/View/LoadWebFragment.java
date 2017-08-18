@@ -40,6 +40,10 @@ public class LoadWebFragment extends Fragment {
         displayButton = (Button) view.findViewById(R.id.display_result);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
+        StepperLayout stepperLayout = (StepperLayout) view.findViewById(R.id.stepperLayout);
+        stepperLayout.setAdapter(new StepAdapter(getChildFragmentManager(), this.getContext()));
+
+
         displayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
