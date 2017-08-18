@@ -51,8 +51,6 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     private Button displayButton;
     private ProgressBar progressBar;
 
-    private StepperLayout stepperLayout;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -138,7 +136,6 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.i("GoogleDrive", "GoogleApiClient connected");
-        hideProgressBar();
 
         if (mSelectedFileDriveId != null) {
             open();
@@ -150,6 +147,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                 .setMimeType(new String[]{"text/plain", "text/html"})
                 .build(mGoogleApiClient);
         try {
+            hideProgressBar();
             startIntentSenderForResult(intentSender, REQUEST_CODE_OPENER, null, 0, 0, 0, null);
         } catch (IntentSender.SendIntentException e) {
             Log.w("GoogleDrive", "Unable to send intent", e);
