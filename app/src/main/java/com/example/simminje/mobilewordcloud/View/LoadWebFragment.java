@@ -3,6 +3,7 @@ package com.example.simminje.mobilewordcloud.View;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -36,12 +37,15 @@ public class LoadWebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_load_web, container, false);
 
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "TitleBold.otf");
+
         displayButton = (Button) view.findViewById(R.id.display_result);
+        displayButton.setTypeface(type);
+
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
         StepperLayout stepperLayout = (StepperLayout) view.findViewById(R.id.stepperLayout);
         stepperLayout.setAdapter(new StepAdapter(getChildFragmentManager(), this.getContext()));
-
 
         displayButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +63,7 @@ public class LoadWebFragment extends Fragment {
                         public void onSuccess() {
                             if (analysisData()) {
                                 Intent intent = new Intent(getContext(), DisplayActivity.class);
-                                intent.putExtra("num",-1);
+                                intent.putExtra("num", -1);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else {

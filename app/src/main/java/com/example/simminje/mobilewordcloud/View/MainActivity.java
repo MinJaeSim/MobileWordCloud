@@ -1,6 +1,7 @@
 package com.example.simminje.mobilewordcloud.View;
 
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,18 +9,23 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.simminje.mobilewordcloud.Model.CustomTypeFace;
 import com.example.simminje.mobilewordcloud.R;
 
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fm;
+    private BottomNavigationView bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
@@ -29,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
 
-        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        setMenuItemFontType();
+
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -68,5 +76,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).create();
         dialog.show();
+    }
+
+    private void setMenuItemFontType() {
+        Menu menu = bottomNavigation.getMenu();
+        String[] menuTitle = getResources().getStringArray(R.array.bottom_nav_item_title);
+        Typeface type = Typeface.createFromAsset(getAssets(), "TitleBold.otf");
+
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            SpannableString spannableString = new SpannableString(menuTitle[i]);
+            spannableString.setSpan(new CustomTypeFace("", type), 0, spannableString.length(), SpannableString.SPAN_INCLUSIVE_INCLUSIVE);
+            item.setTitle(spannableString);
+        }
     }
 }

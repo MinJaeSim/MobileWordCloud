@@ -23,8 +23,9 @@ public class ResultCanvas extends View {
 
     private Paint paint;
     private List<String> data;
-    private List<Rect> rects;
+    private List<Rect> rect;
     private int dataPosition;
+    private List<Integer> colors;
 
     public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -33,6 +34,20 @@ public class ResultCanvas extends View {
 
         paint.setAntiAlias(true);
         paint.setColor(Color.BLACK);
+        colors = new ArrayList<>();
+
+        colors.add(Color.rgb(245, 209, 183));
+        colors.add(Color.rgb(244, 201, 107));
+        colors.add(Color.rgb(233, 129, 56));
+        colors.add(Color.rgb(136, 133, 164));
+        colors.add(Color.rgb(122, 154, 130));
+
+        colors.add(Color.rgb(248, 226, 94));
+        colors.add(Color.rgb(242, 99, 93));
+        colors.add(Color.rgb(35, 98, 107));
+        colors.add(Color.rgb(83, 173, 213));
+        colors.add(Color.rgb(158, 215, 235));
+
         paint.setStyle(Paint.Style.FILL);
         paint.setStrokeJoin(Paint.Join.ROUND);
         paint.setStrokeWidth(4f);
@@ -96,20 +111,17 @@ public class ResultCanvas extends View {
         int maxNum = 20;
 
         if (data != null) {
-            rects = new ArrayList<>();
+            rect = new ArrayList<>();
             data = data.subList(0, 60);
             for (int i = 0; i < data.size(); i += 2) {
                 word = data.get(i + 1);
                 size = Integer.parseInt(data.get(i));
                 Rect boundRect = new Rect();
 
-                if (Character.getType(word.charAt(0)) == 5) {
-                    int fontSize = size > 30 ? (size * 10) : (size * 18);
-                    paint.setTextSize(fontSize);
-                } else {
-                    int fontSize = size > 30 ? (size * 10) : (size * 18);
-                    paint.setTextSize(fontSize);
-                }
+                paint.setColor(colors.get((int) (Math.random() * 10)));
+
+                int fontSize = size > 30 ? (size * 8) : (size * 20);
+                paint.setTextSize(fontSize);
                 paint.getTextBounds(word, 0, word.length(), boundRect);
 
                 posX = (int) (generateRandom.nextDouble() * (width - boundRect.width()));
@@ -125,7 +137,7 @@ public class ResultCanvas extends View {
                     tryNum++;
                 }
 
-                rects.add(textRect);
+                rect.add(textRect);
                 canvas.drawText(word, posX, posY + boundRect.height(), paint);
 
                 if (i >= 40) break;
@@ -143,7 +155,7 @@ public class ResultCanvas extends View {
         int y12 = textRect.bottom;
         int x21, x22, y21, y22;
 
-        for (Rect r : rects) {
+        for (Rect r : rect) {
             x21 = r.left;
             x22 = r.right;
             y21 = r.top;

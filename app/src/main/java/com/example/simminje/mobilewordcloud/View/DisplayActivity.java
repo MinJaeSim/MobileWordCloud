@@ -3,6 +3,7 @@ package com.example.simminje.mobilewordcloud.View;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -29,12 +30,14 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+        Typeface type = Typeface.createFromAsset(getAssets(), "TitleBold.otf");
         int dataPosition = getIntent().getExtras().getInt("num");
 
         ResultCanvas resultCanvas = (ResultCanvas) findViewById(R.id.canvas_view);
         resultCanvas.setDataPosition(dataPosition);
 
         Button backToMainButton = (Button) findViewById(R.id.back_to_main);
+        backToMainButton.setTypeface(type);
         backToMainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +48,7 @@ public class DisplayActivity extends AppCompatActivity {
         });
 
         Button captureButton = (Button) findViewById(R.id.capture);
+        captureButton.setTypeface(type);
         captureButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

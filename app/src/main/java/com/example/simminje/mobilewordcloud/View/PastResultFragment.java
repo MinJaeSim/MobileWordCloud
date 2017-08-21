@@ -1,6 +1,7 @@
 package com.example.simminje.mobilewordcloud.View;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -82,7 +83,12 @@ public class PastResultFragment extends Fragment {
 
         resultHolder(View itemView) {
             super(itemView);
+
+            Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "BodyRegular.otf");
+
             textView = (TextView) itemView.findViewById(R.id.chat_text_view);
+            textView.setTypeface(type);
+
         }
 
         public void setText(String text) {

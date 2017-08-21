@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -59,7 +60,11 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         StepperLayout stepperLayout = (StepperLayout) view.findViewById(R.id.stepperLayout);
         stepperLayout.setAdapter(new StepAdapter(getChildFragmentManager(), this.getContext()));
 
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "TitleBold.otf");
+
         displayButton = (Button) view.findViewById(R.id.display_result);
+        displayButton.setTypeface(type);
+
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
         FloatingActionButton googleButton = (FloatingActionButton) view.findViewById(R.id.googleButton);
@@ -89,7 +94,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                 showProgressBar();
                 if (analysisData()) {
                     Intent intent = new Intent(getContext(), DisplayActivity.class);
-                    intent.putExtra("num",-1);
+                    intent.putExtra("num", -1);
                     startActivity(intent);
                     hideProgressBar();
                     getActivity().finish();
@@ -191,7 +196,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     }
 
     private boolean analysisData() {
-        if (data.length() > 0) {
+
+        if (data != null && data.length() > 0) {
             Context ctx = getContext();
             AssetManager am = ctx.getAssets();
             String dirPath = ctx.getFilesDir().getAbsolutePath();
@@ -206,6 +212,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             }
             analysis.saveData(dirPath);
             return true;
+        } else {
+            Snackbar.make(getView(), "분석할 데이터를 골라주세요", Snackbar.LENGTH_SHORT).show();
         }
         return false;
     }
