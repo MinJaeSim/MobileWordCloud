@@ -169,6 +169,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult result) {
         Log.i("GoogleDrive", "GoogleApiClient connection failed: " + result.toString());
+
         hideProgressBar();
         if (!result.hasResolution()) {
             GoogleApiAvailability.getInstance().getErrorDialog(this.getActivity(), result.getErrorCode(), 0).show();
@@ -196,7 +197,6 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     }
 
     private boolean analysisData() {
-
         if (data != null && data.length() > 0) {
             Context ctx = getContext();
             AssetManager am = ctx.getAssets();

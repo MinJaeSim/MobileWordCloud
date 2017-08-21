@@ -1,10 +1,13 @@
 package com.example.simminje.mobilewordcloud.View;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,13 +18,13 @@ import android.widget.TextView;
 import com.example.simminje.mobilewordcloud.R;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class PastResultFragment extends Fragment {
 
     private List<File> files;
-    private int pos;
 
     @Nullable
     @Override
@@ -35,7 +38,14 @@ public class PastResultFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
 
+        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
+
+        itemAnimator.setAddDuration(1000);
+        itemAnimator.setRemoveDuration(1000);
+
+        recyclerView.setItemAnimator(itemAnimator);
 
         recyclerView.setAdapter(new RecyclerView.Adapter<resultHolder>() {
             @Override
@@ -45,6 +55,7 @@ public class PastResultFragment extends Fragment {
                 view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        view.setBackgroundColor(Color.rgb(80, 138, 219));
                         Intent intent = new Intent(getContext(), DisplayActivity.class);
                         intent.putExtra("num", recyclerView.getChildAdapterPosition(view));
                         startActivity(intent);
@@ -75,6 +86,8 @@ public class PastResultFragment extends Fragment {
         File[] f = file.listFiles();
         if (f.length > 0)
             files = Arrays.asList(f);
+        else
+            files = new ArrayList<>();
     }
 
     class resultHolder extends RecyclerView.ViewHolder {

@@ -72,9 +72,9 @@ public class Analysis {
 
         words = words.subList(0, 60);
 
-        for (WordCount word : words) {
-            System.out.println(word.toString());
-        }
+//        for (WordCount word : words) {
+//            System.out.println(word.toString());
+//        }
     }
 
     private static String removePunctuations(String str) {
