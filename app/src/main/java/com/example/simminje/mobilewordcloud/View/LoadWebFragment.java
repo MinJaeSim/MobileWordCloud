@@ -59,6 +59,7 @@ public class LoadWebFragment extends Fragment {
                         public void onSuccess() {
                             if (analysisData()) {
                                 Intent intent = new Intent(getContext(), DisplayActivity.class);
+                                intent.putExtra("num",-1);
                                 startActivity(intent);
                                 getActivity().finish();
                             } else {

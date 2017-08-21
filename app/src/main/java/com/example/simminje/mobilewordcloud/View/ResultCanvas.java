@@ -24,11 +24,10 @@ public class ResultCanvas extends View {
     private Paint paint;
     private List<String> data;
     private List<Rect> rects;
+    private int dataPosition;
 
     public ResultCanvas(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-
-        loadAnalysisData();
 
         paint = new Paint();
 
@@ -39,17 +38,28 @@ public class ResultCanvas extends View {
         paint.setStrokeWidth(4f);
     }
 
+    public void setDataPosition(int num) {
+        this.dataPosition = num;
+        loadAnalysisData();
+    }
+
     private void loadAnalysisData() {
         String dirPath = getContext().getFilesDir().getAbsolutePath();
 
         File file = new File(dirPath);
 
         if (file.listFiles().length > 0) {
-            File[] f = file.listFiles();
-            File lastFile = f[f.length - 1];
-            String lastFileName = lastFile.getName();
+            List<File> f = Arrays.asList(file.listFiles());
+            File targetFile;
 
-            String loadPath = dirPath + "/" + lastFileName;
+            if (dataPosition == -1) {
+                targetFile = f.get(f.size() - 1);
+            } else {
+                targetFile = f.get(dataPosition);
+            }
+            String targetFileName = targetFile.getName();
+
+            String loadPath = dirPath + "/" + targetFileName;
 
             try {
                 FileInputStream fis = new FileInputStream(loadPath);
@@ -63,7 +73,7 @@ public class ResultCanvas extends View {
 
                 data = new ArrayList<>(Arrays.asList(content.split(" ")));
 
-                System.out.println("총 파일 갯수 : " + f.length);
+                System.out.println("총 파일 갯수 : " + f.size());
 
             } catch (IOException e) {
                 e.printStackTrace();

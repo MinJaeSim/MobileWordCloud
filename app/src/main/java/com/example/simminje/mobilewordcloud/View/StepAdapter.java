@@ -12,7 +12,7 @@ import com.stepstone.stepper.adapter.AbstractFragmentStepAdapter;
 import com.stepstone.stepper.viewmodel.StepViewModel;
 
 public class StepAdapter extends AbstractFragmentStepAdapter {
-    public StepAdapter(@NonNull FragmentManager fm, @NonNull Context context) {
+    StepAdapter(@NonNull FragmentManager fm, @NonNull Context context) {
         super(fm, context);
     }
 

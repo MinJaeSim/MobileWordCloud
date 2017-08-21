@@ -1,5 +1,7 @@
 package com.example.simminje.mobilewordcloud.Model;
 
+import android.support.annotation.NonNull;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -121,7 +123,7 @@ public class Analysis {
         }
 
         @Override
-        public int compareTo(WordCount another) {
+        public int compareTo(@NonNull WordCount another) {
             return another.n - n;
         }
 

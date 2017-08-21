@@ -29,7 +29,10 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+        int dataPosition = getIntent().getExtras().getInt("num");
+
         ResultCanvas resultCanvas = (ResultCanvas) findViewById(R.id.canvas_view);
+        resultCanvas.setDataPosition(dataPosition);
 
         Button backToMainButton = (Button) findViewById(R.id.back_to_main);
         backToMainButton.setOnClickListener(new View.OnClickListener() {

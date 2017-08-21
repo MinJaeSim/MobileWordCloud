@@ -89,6 +89,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                 showProgressBar();
                 if (analysisData()) {
                     Intent intent = new Intent(getContext(), DisplayActivity.class);
+                    intent.putExtra("num",-1);
                     startActivity(intent);
                     hideProgressBar();
                     getActivity().finish();
