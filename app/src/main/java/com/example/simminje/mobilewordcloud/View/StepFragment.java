@@ -31,8 +31,6 @@ public class StepFragment extends Fragment implements Step{
                 v = inflater.inflate(R.layout.step3, container, false);
                 break;
         }
-        //initialize your UI
-
         return v;
     }
 

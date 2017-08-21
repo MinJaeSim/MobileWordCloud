@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                         fm.beginTransaction().replace(R.id.fragment_container, LoadFromWebFragment).commit();
                         return true;
                     case R.id.action_review:
+                        Fragment PastResultFragment = new PastResultFragment();
+                        fm.beginTransaction().replace(R.id.fragment_container, PastResultFragment).commit();
                         return true;
                 }
                 return false;
