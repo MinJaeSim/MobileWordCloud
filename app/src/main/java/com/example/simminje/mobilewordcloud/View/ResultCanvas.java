@@ -120,7 +120,8 @@ public class ResultCanvas extends View {
 
                 paint.setColor(colors.get((int) (Math.random() * 10)));
 
-                int fontSize = size > 30 ? (size * 8) : (size * 20);
+                int fontSize = size * 15 < 250 ? (size * 12) : 250 ;
+
                 paint.setTextSize(fontSize);
                 paint.getTextBounds(word, 0, word.length(), boundRect);
 

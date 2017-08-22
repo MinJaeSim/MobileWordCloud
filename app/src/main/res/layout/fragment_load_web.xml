@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/url_hint"
             android:inputType="textUri"
-            android:text="http://english.chosun.com/site/data/html_dir/2017/07/15/2017071500311.html" />
+            android:text="http://news.joins.com/article/21859483" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
