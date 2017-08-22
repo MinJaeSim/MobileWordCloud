@@ -6,7 +6,7 @@
     android:layout_height="435dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/step1_1"
         android:layout_width="176dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="300dp"
@@ -30,7 +30,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/step1_1"
         app:srcCompat="@drawable/step1_1" />
 
     <ImageView
@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteX="-160dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/step1_2"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"

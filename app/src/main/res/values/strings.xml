@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">Mobile Word Cloud</string>
-    <string name="dialog_load_from_web">웹 데이터 가져오기</string>
-    <string name="dialog_load_from_kakao">카카오톡 데이터 가져오기</string>
     <string name="back_to_main">첫 화면으로</string>
     <string name="url_hint">사이트 주소 입력</string>
     <string name="display_result">결과보기</string>
-    <string name="main_title">말풍선</string>
+    <string name="main_title">Tag Cloud</string>
     <string name="capture">캡쳐하기</string>
     <string name="findByWeb">웹에서 가져오기</string>
     <string name="findByKakao">카톡에서 가져오기</string>
@@ -19,9 +17,9 @@
     <string name="description3">결과 확인!</string>
 
     <string-array name="bottom_nav_item_title">
-        <item>웹에서 가져오기</item>
-        <item>카톡에서 가져오기</item>
-        <item>지난 결과 보기</item>
+        <item>Web</item>
+        <item>KaKaoTalk</item>
+        <item>Review</item>
     </string-array>
 
 </resources>

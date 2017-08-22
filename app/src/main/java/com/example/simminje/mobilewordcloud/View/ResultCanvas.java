@@ -80,13 +80,13 @@ public class ResultCanvas extends View {
                 FileInputStream fis = new FileInputStream(loadPath);
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fis));
 
-                String content = "";
+                StringBuilder content = new StringBuilder();
                 String temp;
                 while ((temp = bufferedReader.readLine()) != null) {
-                    content += temp;
+                    content.append(temp);
                 }
 
-                data = new ArrayList<>(Arrays.asList(content.split(" ")));
+                data = new ArrayList<>(Arrays.asList(content.toString().split(" ")));
 
                 System.out.println("총 파일 갯수 : " + f.size());
 
@@ -120,7 +120,7 @@ public class ResultCanvas extends View {
 
                 paint.setColor(colors.get((int) (Math.random() * 10)));
 
-                int fontSize = size * 15 < 250 ? (size * 12) : 250 ;
+                int fontSize = size * 15 < 150 ? (size * 12) : 150 ;
 
                 paint.setTextSize(fontSize);
                 paint.getTextBounds(word, 0, word.length(), boundRect);

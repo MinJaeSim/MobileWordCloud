@@ -59,6 +59,7 @@ public class PastResultFragment extends Fragment {
                         Intent intent = new Intent(getContext(), DisplayActivity.class);
                         intent.putExtra("num", recyclerView.getChildAdapterPosition(view));
                         startActivity(intent);
+                        getActivity().finish();
                     }
                 });
                 return new resultHolder(view);

@@ -44,6 +44,7 @@ public class DisplayActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 
