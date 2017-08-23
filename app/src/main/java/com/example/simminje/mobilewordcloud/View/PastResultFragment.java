@@ -38,7 +38,7 @@ public class PastResultFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
 
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
 
@@ -55,7 +55,7 @@ public class PastResultFragment extends Fragment {
                 view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        view.setBackgroundColor(Color.rgb(80, 138, 219));
+                        view.setBackgroundColor(Color.rgb(144, 202, 249));
                         Intent intent = new Intent(getContext(), DisplayActivity.class);
                         intent.putExtra("num", recyclerView.getChildAdapterPosition(view));
                         startActivity(intent);
@@ -99,10 +99,8 @@ public class PastResultFragment extends Fragment {
             super(itemView);
 
             Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "BodyRegular.otf");
-
             textView = (TextView) itemView.findViewById(R.id.chat_text_view);
             textView.setTypeface(type);
-
         }
 
         public void setText(String text) {

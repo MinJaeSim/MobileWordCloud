@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.simminje.mobilewordcloud.View.MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="25dp"
+    android:background="@color/colorBackGround"
+    >
 
     <FrameLayout
         android:id="@+id/fragment_container"
