@@ -39,7 +39,6 @@ import java.io.InputStreamReader;
 
 import static android.app.Activity.RESULT_OK;
 
-
 public class LoadKakaoFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private static final int REQUEST_CODE_OPENER = 0;
@@ -52,6 +51,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
     private Button displayButton;
     private ProgressBar progressBar;
 
+    private boolean isCancel;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,6 +60,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
 
         StepperLayout stepperLayout = (StepperLayout) view.findViewById(R.id.stepperLayout);
         stepperLayout.setAdapter(new StepAdapter(getChildFragmentManager(), this.getContext()));
+
+        isCancel = false;
 
         Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "TitleBold.otf");
 
@@ -82,6 +85,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
             @Override
             public void onClick(View v) {
                 showProgressBar();
+                isCancel = true;
                 mGoogleApiClient.disconnect();
                 mGoogleApiClient.connect();
             }
@@ -116,10 +120,13 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         if (requestCode == REQUEST_CODE_RESOLUTION && resultCode == RESULT_OK) {
             mGoogleApiClient.connect();
         } else if (requestCode == REQUEST_CODE_OPENER) {
-            if (data == null)
+            if (data == null) {
+                isCancel = true;
                 mSelectedFileDriveId = null;
-            else
+            } else {
+                isCancel = false;
                 mSelectedFileDriveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
+            }
         }
     }
 
@@ -152,6 +159,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                 .newOpenFileActivityBuilder()
                 .setMimeType(new String[]{"text/plain", "text/html"})
                 .build(mGoogleApiClient);
+
         try {
             hideProgressBar();
             startIntentSenderForResult(intentSender, REQUEST_CODE_OPENER, null, 0, 0, 0, null);
@@ -193,7 +201,8 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                     .addOnConnectionFailedListener(LoadKakaoFragment.this)
                     .build();
         }
-        mGoogleApiClient.connect();
+        if (!isCancel)
+            mGoogleApiClient.connect();
     }
 
     private boolean analysisData() {

@@ -70,11 +70,11 @@ public class Analysis {
             if (wc.word.length() > 1) words.add(wc);
         }
 
-        words = words.subList(0, 60);
+        words = words.subList(0, 80);
 
-        for (WordCount word : words) {
+        for (WordCount word : words)
             System.out.println(word.toString());
-        }
+
     }
 
     private static String removePunctuations(String str) {

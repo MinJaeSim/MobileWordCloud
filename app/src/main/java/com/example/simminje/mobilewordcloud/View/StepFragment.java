@@ -24,40 +24,28 @@ public class StepFragment extends Fragment implements Step {
         TextView stepTitle = null;
         TextView stepBody = null;
 
-        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "BodyRegular.otf");
         int num = getArguments().getInt("page");
         switch (num) {
             case 0:
                 v = inflater.inflate(R.layout.step1, container, false);
                 stepTitle = (TextView) v.findViewById(R.id.step1_1);
                 stepBody = (TextView) v.findViewById(R.id.step1_2);
-
-                stepTitle.setTypeface(type);
-                stepBody.setTypeface(type);
                 break;
             case 1:
                 v = inflater.inflate(R.layout.step2, container, false);
                 stepTitle = (TextView) v.findViewById(R.id.step2_1);
                 stepBody = (TextView) v.findViewById(R.id.step2_2);
-
-                stepTitle.setTypeface(type);
-                stepBody.setTypeface(type);
                 break;
             case 2:
                 v = inflater.inflate(R.layout.step3, container, false);
                 stepTitle = (TextView) v.findViewById(R.id.step3_1);
                 stepBody = (TextView) v.findViewById(R.id.step3_2);
-
-                stepTitle.setTypeface(type);
-                stepBody.setTypeface(type);
                 break;
         }
 
-        stepTitle.setTextColor(Color.rgb(0, 0, 0));
-        stepBody.setTextColor(Color.rgb(0, 0, 0));
+        stepTitle.setTextColor(Color.rgb(68, 68, 68));
+        stepBody.setTextColor(Color.rgb(68, 68, 68));
 
-        stepTitle.setTypeface(type);
-        stepBody.setTypeface(type);
         return v;
     }
 

@@ -103,25 +103,31 @@ public class ResultCanvas extends View {
 
         int width = canvas.getWidth();
         int height = canvas.getHeight();
-        int posX, posY;
-        int size;
-        String word;
-        Random generateRandom = new Random();
-        int tryNum = 0;
-        int maxNum = 20;
 
         if (data != null) {
+
             rect = new ArrayList<>();
+            List<String> words = new ArrayList<>();
+
+            int posX, posY;
+            int size;
+            int tryNum = 0;
+            int maxNum = 20;
+            Random generateRandom = new Random();
+
             data = data.subList(0, 60);
-            for (int i = 0; i < data.size(); i += 2) {
-                word = data.get(i + 1);
-                size = Integer.parseInt(data.get(i));
+
+
+            for (int i = 0; i < data.size(); i += 2)
+                words.add(data.get(i + 1));
+
+            for (int i = 0; i < words.size(); i++) {
+                String word = words.get(i);
                 Rect boundRect = new Rect();
 
+                int fontSize = (25 - i) * 5 > 25 ? (25 - i) * 5 : 25;
+
                 paint.setColor(colors.get((int) (Math.random() * 10)));
-
-                int fontSize = size * 15 < 150 ? (size * 12) : 150 ;
-
                 paint.setTextSize(fontSize);
                 paint.getTextBounds(word, 0, word.length(), boundRect);
 
@@ -141,7 +147,7 @@ public class ResultCanvas extends View {
                 rect.add(textRect);
                 canvas.drawText(word, posX, posY + boundRect.height(), paint);
 
-                if (i >= 40) break;
+                if (i >= 25) break;
             }
         } else {
             canvas.drawLine(0, 0, width, height, paint);
