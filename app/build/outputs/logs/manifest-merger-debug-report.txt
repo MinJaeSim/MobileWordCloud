@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:3:5-51
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:5:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:8:22-64
+application
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:10:5-38:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/simminje/.android/build-cache/c06715ef31c1bdc3e32fad613cd4044bb13e49a3/output/AndroidManifest.xml:9:5-20
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/simminje/.android/build-cache/084a7ec1f65f6ca081558b517e8d42a014ec6856/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/simminje/.android/build-cache/ebcd7b9d500b9c173745d48f3ff8da2eb1eeb534/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:13:9-41
+	android:supportsRtl
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:15:9-35
+	android:roundIcon
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:14:9-54
+	android:allowBackup
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:11:9-35
+	android:icon
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:12:9-43
+	android:theme
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:16:9-40
+activity#com.example.simminje.mobilewordcloud.View.MainActivity
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:17:9-29:20
+	android:screenOrientation
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:19:13-49
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:18:13-46
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:22:27-74
+intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:24:13-28:29
+action#android.intent.action.SEND
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:26:17-76
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:26:27-73
+data
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:27:17-55
+	android:mimeType
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:27:23-52
+activity#com.example.simminje.mobilewordcloud.View.DisplayActivity
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:31:9-33:52
+	android:screenOrientation
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:33:13-49
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:32:13-49
+meta-data#com.google.android.gms.version
+ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:35:9-37:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:37:13-66
+	android:name
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:36:13-58
+uses-sdk
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/simminje/.android/build-cache/c06715ef31c1bdc3e32fad613cd4044bb13e49a3/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/simminje/.android/build-cache/084a7ec1f65f6ca081558b517e8d42a014ec6856/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/simminje/.android/build-cache/ebcd7b9d500b9c173745d48f3ff8da2eb1eeb534/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/2a301b1607a71308c207b8c2441c82899e5fdefb/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:19-85
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/2a301b1607a71308c207b8c2441c82899e5fdefb/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:26:9-47

@@ -53,6 +53,29 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
 
     private boolean isCancel;
 
+    private final ResultCallback<DriveApi.DriveContentsResult> contentsOpenedCallback = new ResultCallback<DriveApi.DriveContentsResult>() {
+        @Override
+        public void onResult(@NonNull DriveApi.DriveContentsResult result) {
+            if (!result.getStatus().isSuccess()) {
+                return;
+            }
+            DriveContents contents = result.getDriveContents();
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(contents.getInputStream()));
+            StringBuilder builder = new StringBuilder();
+            String line;
+            try {
+                while ((line = reader.readLine()) != null) {
+                    builder.append(line).append(" ");
+                }
+                data = builder.toString();
+                hideProgressBar();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -72,6 +95,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
 
         FloatingActionButton googleButton = (FloatingActionButton) view.findViewById(R.id.googleButton);
 
+        showProgressBar();
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                     .addApi(Drive.API)
@@ -80,6 +104,7 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
                     .addOnConnectionFailedListener(LoadKakaoFragment.this)
                     .build();
         }
+        hideProgressBar();
 
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -236,27 +261,4 @@ public class LoadKakaoFragment extends Fragment implements GoogleApiClient.Conne
         progressBar.setVisibility(View.INVISIBLE);
         displayButton.setEnabled(true);
     }
-
-    private final ResultCallback<DriveApi.DriveContentsResult> contentsOpenedCallback = new ResultCallback<DriveApi.DriveContentsResult>() {
-        @Override
-        public void onResult(@NonNull DriveApi.DriveContentsResult result) {
-            if (!result.getStatus().isSuccess()) {
-                return;
-            }
-            DriveContents contents = result.getDriveContents();
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(contents.getInputStream()));
-            StringBuilder builder = new StringBuilder();
-            String line;
-            try {
-                while ((line = reader.readLine()) != null) {
-                    builder.append(line).append(" ");
-                }
-                data = builder.toString();
-                hideProgressBar();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    };
 }

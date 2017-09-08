@@ -63,37 +63,34 @@ public class ResultCanvas extends View {
 
         File file = new File(dirPath);
 
-        if (file.listFiles().length > 0) {
-            List<File> f = Arrays.asList(file.listFiles());
-            File targetFile;
+        List<File> f = Arrays.asList(file.listFiles());
+        File targetFile;
 
-            if (dataPosition == -1) {
-                targetFile = f.get(f.size() - 1);
-            } else {
-                targetFile = f.get(dataPosition);
-            }
-            String targetFileName = targetFile.getName();
-
-            String loadPath = dirPath + "/" + targetFileName;
-
-            try {
-                FileInputStream fis = new FileInputStream(loadPath);
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fis));
-
-                StringBuilder content = new StringBuilder();
-                String temp;
-                while ((temp = bufferedReader.readLine()) != null) {
-                    content.append(temp);
-                }
-
-                data = new ArrayList<>(Arrays.asList(content.toString().split(" ")));
-
-                System.out.println("총 파일 갯수 : " + f.size());
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        if (dataPosition == -1) {
+            targetFile = f.get(f.size() - 1);
+        } else {
+            targetFile = f.get(dataPosition);
         }
+        String targetFileName = targetFile.getName();
+
+        String loadPath = dirPath + "/" + targetFileName;
+
+        try (FileInputStream fis = new FileInputStream(loadPath);
+             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fis))) {
+            StringBuilder content = new StringBuilder();
+            String temp;
+            while ((temp = bufferedReader.readLine()) != null) {
+                content.append(temp);
+            }
+
+            data = new ArrayList<>(Arrays.asList(content.toString().split(" ")));
+
+            System.out.println("총 파일 갯수 : " + f.size());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -110,7 +107,6 @@ public class ResultCanvas extends View {
             List<String> words = new ArrayList<>();
 
             int posX, posY;
-            int size;
             int tryNum = 0;
             int maxNum = 20;
             Random generateRandom = new Random();

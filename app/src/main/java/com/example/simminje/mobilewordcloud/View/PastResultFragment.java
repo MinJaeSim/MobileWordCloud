@@ -38,14 +38,6 @@ public class PastResultFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
-
-        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
-
-        itemAnimator.setAddDuration(1000);
-        itemAnimator.setRemoveDuration(1000);
-
-        recyclerView.setItemAnimator(itemAnimator);
 
         recyclerView.setAdapter(new RecyclerView.Adapter<resultHolder>() {
             @Override
@@ -91,7 +83,7 @@ public class PastResultFragment extends Fragment {
             files = new ArrayList<>();
     }
 
-    class resultHolder extends RecyclerView.ViewHolder {
+    private class resultHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;
 

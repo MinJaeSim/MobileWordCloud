@@ -1,0 +1,7 @@
+#Fri Sep 08 19:09:46 KST 2017
+base.0=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1f53cd0a4fb9c29628eba710f762b9d82367df74
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_49019c07ad1b408dd85eaefe69ccca21d7dbef44/classes.dex
+base.1=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_49019c07ad1b408dd85eaefe69ccca21d7dbef44
+file.0=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1f53cd0a4fb9c29628eba710f762b9d82367df74/classes.dex

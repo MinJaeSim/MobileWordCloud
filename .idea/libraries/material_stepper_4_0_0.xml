@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="material-stepper-4.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

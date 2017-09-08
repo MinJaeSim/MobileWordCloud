@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/ms_default_button_background.xml",
+        "source": "/Users/simminje/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/res/drawable-v21/ms_default_button_background.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]
