@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Thu Jan 18 11:09:48 KST 2018
+1.base=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/assets/debug
+2.path=filter.txt
+0.baseType=DIRECTORY
+2.base=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/assets/debug
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=TitleBold.otf
+0.set=ASSET
+0.base=/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/assets/debug
+2.baseType=DIRECTORY
+1.path=BodyRegular.otf

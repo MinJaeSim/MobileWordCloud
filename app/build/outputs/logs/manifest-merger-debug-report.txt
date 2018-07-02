@@ -1,18 +1,48 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+MERGED from [com.android.support:design:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/c420ef65604b1b75d473e28eb1e43f37/AndroidManifest.xml:17:1-22:12
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/material-stepper-4.0.0.aar/11fdc99d16e27ee7c791a2064b09b76c/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ff2af4633a426bd14541af5d0f3a3816/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/simminje/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/3157ccf095ff1caa4dae7762a9272b08/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-drive-15.0.1.aar/6a67e871925599cb24d8a065e91af4f9/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/7b1de210f18568130645ded85d62f64f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/e0e871500999317fe0e08e6d51213a5d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f7f9577bc28fcf49be0bc49ff68a0128/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/4cec9ab7c20859ec0f18f0ed09543c74/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/689dbbd4f1bbe0dffe70ac3e3099aa49/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2110c4a9255eadffb0a1c6a2e9fe26f2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/182ed915fff3a47054e03d61180c3876/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a7208705bcbbdb7d669452aaed3aa3f1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/feabfa03c391d564e3bff3008233cfad/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/b8980961c386515348589e573bf4be3b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/a4b2aae7aca2142757711396a18bc2ed/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b30af4f1593b432291ce06eb208c4a8a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f1d8413d6b3c692676c726cc6cb43d76/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b044c32cf18e200d32c8d8eb1fef90a8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c54026b2904b097aa0aadc5627483f89/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:1-40:12
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:5:5-80
 	android:name
@@ -27,33 +57,28 @@ ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/Androi
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:8:22-64
 application
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:10:5-38:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/simminje/.android/build-cache/c06715ef31c1bdc3e32fad613cd4044bb13e49a3/output/AndroidManifest.xml:9:5-20
-MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/simminje/.android/build-cache/084a7ec1f65f6ca081558b517e8d42a014ec6856/output/AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/simminje/.android/build-cache/ebcd7b9d500b9c173745d48f3ff8da2eb1eeb534/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:29:5-20
-	android:label
-		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:13:9-41
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/material-stepper-4.0.0.aar/11fdc99d16e27ee7c791a2064b09b76c/AndroidManifest.xml:25:5-20
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/material-stepper-4.0.0.aar/11fdc99d16e27ee7c791a2064b09b76c/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/simminje/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/3157ccf095ff1caa4dae7762a9272b08/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/simminje/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/3157ccf095ff1caa4dae7762a9272b08/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-drive-15.0.1.aar/6a67e871925599cb24d8a065e91af4f9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-drive-15.0.1.aar/6a67e871925599cb24d8a065e91af4f9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f7f9577bc28fcf49be0bc49ff68a0128/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f7f9577bc28fcf49be0bc49ff68a0128/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:22:5-26:19
 	android:supportsRtl
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:13:9-41
 	android:roundIcon
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:14:9-54
-	android:allowBackup
-		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:11:9-35
 	android:icon
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:16:9-40
 activity#com.example.simminje.mobilewordcloud.View.MainActivity
@@ -62,7 +87,7 @@ ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/Androi
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:19:13-49
 	android:name
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:18:13-46
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:21:17-69
@@ -72,7 +97,7 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:22:27-74
-intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
+intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/plain
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.SEND
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:25:17-69
@@ -94,61 +119,75 @@ ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/Androi
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:32:13-49
 meta-data#com.google.android.gms.version
 ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:35:9-37:69
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:23:9-25:69
 	android:value
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:37:13-66
 	android:name
 		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml:36:13-58
 uses-sdk
 INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/simminje/.android/build-cache/c06715ef31c1bdc3e32fad613cd4044bb13e49a3/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.android/build-cache/abc4b3fc1c9815eec1ab32c06e0d987f5d7ffbdf/output/AndroidManifest.xml:21:5-23:41
-MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/simminje/.android/build-cache/084a7ec1f65f6ca081558b517e8d42a014ec6856/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/simminje/.android/build-cache/ebcd7b9d500b9c173745d48f3ff8da2eb1eeb534/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/simminje/.android/build-cache/213b4797a801211d7e5973720cd335edfce1bece/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/2a301b1607a71308c207b8c2441c82899e5fdefb/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:21:5-23:58
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:23:9-59
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/c420ef65604b1b75d473e28eb1e43f37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/c420ef65604b1b75d473e28eb1e43f37/AndroidManifest.xml:20:5-44
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/material-stepper-4.0.0.aar/11fdc99d16e27ee7c791a2064b09b76c/AndroidManifest.xml:21:5-23:41
+MERGED from [com.stepstone.stepper:material-stepper:4.0.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/material-stepper-4.0.0.aar/11fdc99d16e27ee7c791a2064b09b76c/AndroidManifest.xml:21:5-23:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ff2af4633a426bd14541af5d0f3a3816/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ff2af4633a426bd14541af5d0f3a3816/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/simminje/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/3157ccf095ff1caa4dae7762a9272b08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/simminje/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/3157ccf095ff1caa4dae7762a9272b08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-drive-15.0.1.aar/6a67e871925599cb24d8a065e91af4f9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-drive-15.0.1.aar/6a67e871925599cb24d8a065e91af4f9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/7b1de210f18568130645ded85d62f64f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/7b1de210f18568130645ded85d62f64f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/e0e871500999317fe0e08e6d51213a5d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/e0e871500999317fe0e08e6d51213a5d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f7f9577bc28fcf49be0bc49ff68a0128/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/f7f9577bc28fcf49be0bc49ff68a0128/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/15bd0476d567ffe3c6bbfeddacee1382/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/4cec9ab7c20859ec0f18f0ed09543c74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/4cec9ab7c20859ec0f18f0ed09543c74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/689dbbd4f1bbe0dffe70ac3e3099aa49/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/689dbbd4f1bbe0dffe70ac3e3099aa49/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2110c4a9255eadffb0a1c6a2e9fe26f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2110c4a9255eadffb0a1c6a2e9fe26f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/182ed915fff3a47054e03d61180c3876/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/182ed915fff3a47054e03d61180c3876/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a7208705bcbbdb7d669452aaed3aa3f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a7208705bcbbdb7d669452aaed3aa3f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/feabfa03c391d564e3bff3008233cfad/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/feabfa03c391d564e3bff3008233cfad/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/b8980961c386515348589e573bf4be3b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/b8980961c386515348589e573bf4be3b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/a4b2aae7aca2142757711396a18bc2ed/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/a4b2aae7aca2142757711396a18bc2ed/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b30af4f1593b432291ce06eb208c4a8a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b30af4f1593b432291ce06eb208c4a8a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f1d8413d6b3c692676c726cc6cb43d76/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/f1d8413d6b3c692676c726cc6cb43d76/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b044c32cf18e200d32c8d8eb1fef90a8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b044c32cf18e200d32c8d8eb1fef90a8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c54026b2904b097aa0aadc5627483f89/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/simminje/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c54026b2904b097aa0aadc5627483f89/AndroidManifest.xml:20:5-44
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
+		ADDED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/simminje/Workspace/Android/MobileWordCloud/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/simminje/.android/build-cache/7405e820e2fe943aa48494f67d81d4bfd9e97772/output/AndroidManifest.xml:19:19-85
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/d898d3c25a36821b64c3120a5a70aa96dbb8c638/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/5b4ceda70937f648025cd101586ab232361ac617/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/simminje/.android/build-cache/f7c1253562779618e55b999bd06d78624aa2ffe2/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/simminje/.android/build-cache/2a301b1607a71308c207b8c2441c82899e5fdefb/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/simminje/.android/build-cache/b8c294ff4a58dfa2875b06abc0ee47da9f9e1428/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/simminje/.android/build-cache/6ecd9e796aa825fe99f8f80cfd9e6142b13ac9b9/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/04721bdc7c1452ef19d4e686df3d14b30c541611/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/simminje/.android/build-cache/1cbbc344103a6efeab827523323885bd27214bd7/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/simminje/.android/build-cache/3f871bc692583c4f3f7fbeda1151031d6195de75/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/simminje/.android/build-cache/c0140c76c4edc79db4e0977b55055d7410acd1d5/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/simminje/.android/build-cache/921d3aff99d6771a2cf1e5510461e1c8f0caecad/output/AndroidManifest.xml:25:5-27:41
-	android:value
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:27:9-38
-	android:name
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/simminje/.android/build-cache/67b05394c1ba0a2591922f2aa01fc147d8877a1a/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/simminje/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d73c2dbac23302794924ab6de5a7139/AndroidManifest.xml:24:13-79

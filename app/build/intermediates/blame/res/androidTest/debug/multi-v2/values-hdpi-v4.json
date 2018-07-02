@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/simminje/Workspace/Android/MobileWordCloud/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/simminje/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/197c148de0db99144c618f1a8a6643ab/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
