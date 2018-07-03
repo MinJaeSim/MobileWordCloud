@@ -1,3 +1,25 @@
 # Mobile Word Cloud
-1. 웹 사이트를 크롤링 하여 단어 빈도수 체크하고 체크한 데이터를 바탕으로 워드클라우드를 통한 키워드 시각화
-2. 구글 드라이브에 있는 카카오톡 대화록.txt파일을 분석하여 빈도수를 체크하고 체크한 데이터를 바탕으로 워드클라우드를 통한 키워드 시각화 
+1. 웹 사이트를 스크레이핑하여 단어 빈도수 카운팅하고 그 데이터를 바탕으로 키워드 시각화
+
+2. 구글 드라이브에 있는 카카오톡 대화록 텍스트 파일을 분석하여 단어 별 빈도수를 카운팅하고 그 데이터를 바탕으로 키워드 시각화 
+
+-----
+
+Application pictures
+-----
+ - **첫 화면**
+
+![main](https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/main.png)
+
+
+- **선택 화면**
+
+![select](https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/select.png)
+
+- **결과 화면**
+
+![result](https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/result.png)
+
+- **다시보기 화면**
+
+![review](https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/review.png)
