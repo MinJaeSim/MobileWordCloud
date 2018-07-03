@@ -9,17 +9,17 @@ Application pictures
 -----
  - **첫 화면**
 
-<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/main.png" width ="600" height="800">
+<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/main.png" width ="60%" height="60%">
 
 
 - **선택 화면**
 
-<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/select.png" width="600" height="800">
+<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/select.png" width ="60%" height="60%">
 
 - **결과 화면**
 
-<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/result.png" width="600" height="800">
+<img src="https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/result.png" width ="60%" height="60%">
 
 - **다시보기 화면**
 
-<img src= "https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/review.png" width="600" height="800">
+<img src= "https://github.com/MinJaeSim/MobileWordCloud/blob/master/img/review.png" width ="60%" height="60%">
